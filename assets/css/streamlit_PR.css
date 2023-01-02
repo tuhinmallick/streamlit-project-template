@@ -1,0 +1,71 @@
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+
+/* Footer CoE */
+footer:after {
+	content:'Made with \1F499  by your CoE team';
+	visibility: visible;
+	display: block;
+	position: relative;
+	color: #184487;
+	padding: 5px;
+	top: 2px;
+	opacity: 1;
+}
+
+
+/* Text side bar and background side bar */
+section[data-testid="stSidebar"] > * {
+  background-color: #002F65 !important;
+  color: #FFFFFF !important;
+}
+
+section[data-testid="stSidebar"] a:visited {
+  color: #FFFFFF !important;
+}
+
+/* Label widgets sidebar */
+section[data-testid="stSidebar"] label{
+  color: #FFFFFF !important;
+}
+
+
+/* Sidebar title */
+section[data-testid="stSidebar"] h1{
+  color: #8EC4FF !important;
+}
+
+/* Sidebar title */
+section[data-testid="stSidebar"] h2{
+  color: #8EC4FF !important;
+}
+
+/* Sidebar title */
+section[data-testid="stSidebar"] h3{
+  color: #8EC4FF !important;
+}
+
+/* Sidebar title */
+section[data-testid="stSidebar"] h4{
+  color: #8EC4FF !important;
+}
+
+/* button color */
+button {
+    color: #FFFFFF !important;
+    background-color: #729BC7 !important;
+}
+
+/* Checkbox background */
+div[class="row-widget stCheckbox"] {
+    color: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border-radius: 5px;
+}
+
+/* Slider button */
+div[role="slider"] {
+    background-color: #8EC4FF !important;
+    border_radius: 5px !important;
+}

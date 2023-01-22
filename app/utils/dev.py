@@ -14,8 +14,6 @@ def timing(func):
             return func(*args, **kwargs)
         finally:
             end_ = int(round(time() * 1000)) - start
-            logger.debug(
-                f"{func.__name__}:: Total execution time: {end_ if end_ > 0 else 0} ms"
-            )
+            logger.debug(f"{func.__name__}:: Total execution time: {max(end_, 0)} ms")
 
     return _time_it

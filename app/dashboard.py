@@ -24,11 +24,9 @@ def fake_data():
     """some fake data"""
 
     dt = pd.date_range("2021-01-01", "2021-03-01")
-    df = pd.DataFrame(
+    return pd.DataFrame(
         {"datetime": dt, "values": np.random.randint(0, 10, size=len(dt))}
     )
-
-    return df
 
 
 def main():

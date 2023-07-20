@@ -2,6 +2,8 @@ import streamlit as st
 
 
 class Page:
+    """Base class for all pages"""
+
     def __init__(self, name, data, **kwargs):
         self.name = name
         self.data = data

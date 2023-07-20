@@ -4,14 +4,14 @@ requires = ["poetry_core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "pr-streamlit-template"
+name = "apalytics"
 version = "0.2.3"
-description = "A streamlit project template"
+description = "Apalytics is apadua's analytics library"
 readme = "README.md"
-authors = ["tuhinmallick <tuhin.mllk@gmail.com>"]
+authors = ["Nik Atlas <nikatlas@gmail.com>"]
 license = "MIT"
-repository = "https://github.com/streamlit-project-template"
-homepage = "https://github.com/streamlit-project-template"
+repository = "https://github.com/apadua-org/apalytics"
+homepage = "https://github.com/apadua-org/apalytics"
 
 # Keywords description https://python-poetry.org/docs/pyproject/#keywords
 keywords = []  #! Update me
@@ -33,6 +33,9 @@ classifiers = [  #! Update me
 [tool.poetry.dependencies]
 python = "^3.8"
 streamlit = "^1.9.0"
+altair = "^4.1.0"
+loguru = "^0.5.3"
+plotly_express = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
 bandit = "^1.7.1"

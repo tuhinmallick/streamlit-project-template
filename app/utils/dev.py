@@ -5,8 +5,8 @@ from loguru import logger
 
 
 def timing(func):
-    """Use timing decorator to time functions for debugging.
-    """
+    """Use timing decorator to time functions for debugging."""
+
     @wraps(func)
     def _time_it(*args, **kwargs):
         start = int(round(time() * 1000))

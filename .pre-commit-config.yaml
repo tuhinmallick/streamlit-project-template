@@ -26,7 +26,7 @@ repos:
         entry: poetry run isort --settings-path pyproject.toml
         types: [python]
         language: system
-        args: [--ignore=E501]
+        args: []
 
   - repo: local
     hooks:
@@ -40,32 +40,26 @@ repos:
     hooks:
       - id: flake8
         name: flake8
-        entry: poetry run flake8 --config pyproject.toml
+        entry: poetry run flake8 --config setup.cfg
         types: [python]
         language: system
-        args: [--ignore=E501]
-        
-  - repo: local
-    hooks:
-      - id: pylint
-        name: pylint
-        entry: pylint app/ resc/ tests/
-        language: system
-        always_run: true
-        pass_filenames: false
-  - repo: local
-      hooks:
-        - id: pipenv-to-requirements
-          name: pipenv-to-requirements
-          entry: pipenv_to_requirements
-          language: system
-          always_run: true
-          pass_filenames: false
-  - repo: local
-      hooks:
-        - id: pipenv-setup sync
-          name: pipenv-setup sync
-          entry: pylint app/ resc/ tests/
-          language: pipenv run pipenv-setup sync
-          pass_filenames: false
-      
+        files: app/*
+        args: []
+
+#  - repo: local
+#    hooks:
+#      - id: pylint
+#        name: pylint
+#        entry: poetry run pylint app/ resc/ tests/
+#        language: system
+#        always_run: true
+#        pass_filenames: false
+#
+#  - repo: local
+#    hooks:
+#        - id: pipenv-to-requirements
+#          name: pipenv-to-requirements
+#          entry: pipenv_to_requirements
+#          language: system
+#          always_run: true
+#          pass_filenames: false

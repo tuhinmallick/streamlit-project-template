@@ -1,11 +1,7 @@
 """Main module for the streamlit app"""
-import os
-
 import numpy as np
 import pandas as pd
 import streamlit as st
-from loguru import logger
-
 from pages.about import About
 from pages.datatable import DataTable
 from utils.sidebar import sidebar_caption
@@ -36,23 +32,20 @@ def main():
 
     st.sidebar.title("Tools")
 
-    PAGES = {
-        "Table": DataTable,
-        "About": About
-    }
+    pages = {"Table": DataTable, "About": About}
 
     # Select pages
     # Use dropdown if you prefer
-    selection = st.sidebar.radio("Pages", list(PAGES.keys()))
+    selection = st.sidebar.radio("Pages", list(pages.keys()))
     sidebar_caption()
 
-    page = PAGES[selection]
+    page = pages[selection]
 
-    DATA = {"base": fake_data()}
+    data = {"base": fake_data()}
 
     with st.spinner(f"Loading Page {selection} ..."):
-        page = page(DATA)
-        page()
+        page_runner = page(data)
+        page_runner()
 
 
 if __name__ == "__main__":

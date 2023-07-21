@@ -3,5 +3,5 @@
 
 while true; do
     [ -e stopme ] && break
-    streamlit run dashboard.py
+    poetry run streamlit run app/dashboard.py
 done

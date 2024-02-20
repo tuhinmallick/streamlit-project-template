@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.8-slim-buster@sha256:90834dba6381dfc3957573dc7a3e6c5c8ed255cf60079329a6da2b5e6d4257b8
 
 ENV LANG=C.UTF-8 \
   LC_ALL=C.UTF-8 \
